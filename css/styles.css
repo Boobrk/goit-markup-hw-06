@@ -3,7 +3,7 @@
 *::after {
 	box-sizing: border-box;
 }
-/* #region base */
+
 body {
 	font-family: 'Roboto', sans-serif;
 	background-color: #ffffff;
@@ -38,9 +38,7 @@ img {
 button {
 	cursor: pointer;
 }
-/* #endregion */
 
-/* #region header */
 .page-header {
 	border-bottom: 1px solid #e7e9fc;
 	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -295,9 +293,7 @@ button {
 		display: none;
 	}
 }
-/* #endregion */
 
-/* #region hero */
 .hero {
 	padding: 188px 0;
 	background-image: linear-gradient(
@@ -416,9 +412,7 @@ button {
 		}
 	}
 }
-/* #endregion */
 
-/* #region studio */
 .studio {
 	padding: 120px 0;
 }
@@ -529,9 +523,7 @@ button {
 		flex-basis: calc((100% - 72px) / 2);
 	}
 }
-/* #endregion */
 
-/* #region team */
 .team {
 	background-color: #f4f4fd;
 	padding: 120px 0;
@@ -654,9 +646,7 @@ button {
 		width: 264px;
 	}
 }
-/* #endregion */
 
-/* #region portfolio */
 .portfolio-section {
 	padding: 120px 0;
 }
@@ -769,9 +759,6 @@ button {
 	}
 }
 
-/* #endregion */
-
-/* #region footer */
 .footer-page {
 	background: #2e2f42;
 	padding: 100px 0;
@@ -1003,9 +990,7 @@ button {
 		padding: 0 0 0 16px;
 	}
 }
-/* #endregion */
 
-/* #region modal */
 .modal-overlay {
 	position: fixed;
 	top: 0;
@@ -1189,6 +1174,11 @@ input[type='checkbox']:checked + label .lable-checkbox-span {
 	fill: #f4f4fd;
 }
 
+input[type='checkbox']:focus-visible + label > .lable-checkbox-span {
+	outline: 1px solid #404bbf;
+	outline-offset: 2px;
+}
+
 .privacy {
 	color: #4d5ae5;
 }
@@ -1228,4 +1218,89 @@ input[type='checkbox']:checked + label .lable-checkbox-span {
 	}
 }
 
-/* #endregion */
+.container-logo {
+	margin-bottom: 16px;
+}
+
+.footer-text {
+	margin-top: 16px;
+}
+
+@media screen and (max-width: 767px) {
+	.container-logo {
+		margin-bottom: 16px;
+	}
+	.footer-text {
+		margin-top: 16px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.nav-menu,
+	.contacts-menu,
+	.button {
+		display: none;
+	}
+
+	.logo {
+		display: block;
+	}
+}
+
+.header-nav {
+	display: flex;
+	align-items: center;
+}
+
+.nav-menu {
+	display: flex;
+	gap: 40px;
+}
+
+.contacts-menu {
+	display: flex;
+	align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+	.header-nav {
+		flex-direction: column;
+	}
+
+	.nav-menu,
+	.contacts-menu,
+	.button {
+		display: none;
+	}
+
+	.logo {
+		display: block;
+		margin-bottom: 16px;
+	}
+}
+
+.from-container-checkbox {
+	display: flex;
+	align-items: center;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+.lable-checkbox {
+	display: flex;
+	align-items: center;
+}
+
+.lable-checkbox-span {
+	display: inline-block;
+	margin-right: 8px;
+}
